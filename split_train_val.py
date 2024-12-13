@@ -14,22 +14,19 @@ os.makedirs(output_val_folder, exist_ok=True)
 # 划分比例
 train_ratio = 0.8
 
-# 获取所有图片
+# 获取图片
 images = os.listdir(input_folder)
-random.shuffle(images)  # 随机打乱顺序
+random.shuffle(images)  # 随机
 
-# 计算划分索引
 split_index = int(len(images) * train_ratio)
 
 # 划分训练集和验证集
 train_images = images[:split_index]
 val_images = images[split_index:]
 
-# 复制图片到训练集
 for image_name in train_images:
     shutil.copy(os.path.join(input_folder, image_name), os.path.join(output_train_folder, image_name))
 
-# 复制图片到验证集
 for image_name in val_images:
     shutil.copy(os.path.join(input_folder, image_name), os.path.join(output_val_folder, image_name))
 

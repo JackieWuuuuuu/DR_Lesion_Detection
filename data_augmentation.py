@@ -3,8 +3,8 @@ from torchvision import transforms
 from PIL import Image
 
 # 输入和输出文件夹路径
-input_folder = r'C:\PythonCode\DGDR-main\GDRBench\images\IDRID\pdr'
-output_folder = r'C:\PythonCode\ultralytics-main-pure\DR_cls_IDRiD\train\4_pdr'
+input_folder = r'A'
+output_folder = r'B'
 
 # 创建输出文件夹
 os.makedirs(output_folder, exist_ok=True)
